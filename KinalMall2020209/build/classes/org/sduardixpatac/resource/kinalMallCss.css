@@ -1,0 +1,63 @@
+.anchor-pane {
+    -fx-background-color: #3F48CC;
+    -fx-border-color: #3F48CC;
+}
+.anchor-pane-Usuario {
+    -fx-background-color: #0011FF;
+    -fx-border-color: #000000;
+}
+.pane{
+    -fx-background-color: #3F48CC;
+    -fx-background-radius: 0 0 50 50
+    
+}
+.paneNegro{
+    -fx-background-color: black;    
+}
+.button1{
+    -fx-background-color: black; 
+    color:#FFFFFF;
+    -fx-background-radius: 15 15 15 15;
+}
+
+.button1:hover{
+    -fx-background-color: #464647; 
+    color:#FFFFFF;
+    -fx-background-radius: 13 13 13 13;
+    
+}
+.button1:pressed{
+    -fx-background-color: #858586; 
+    color:#FFFFFF;
+    -fx-background-radius: 8 8 8 8;
+}
+.buttonTrans{
+    -fx-background-color: transparent;
+    -fx-font-family: "Bookman Old Style";
+    -fx-text-fill: yellow;
+    -fx-font-weight: bold italic;
+}
+.buttonNegro{
+    -fx-background-color: #000000;
+    -fx-font-family: "Bookman Old Style";
+    -fx-text-fill: yellow;
+    -fx-font-weight: bold italic;
+}
+.buttonTrans:pressed{
+    -fx-background-color: White;
+    -fx-background-radius: 50 0 0 50;
+}
+.buttonTrans:hover{
+    -fx-background-color: #525252; 
+    -fx-font-family: "Bookman Old Style";
+    -fx-text-fill: yellow;
+    -fx-font-weight: bold italic;
+    -fx-background-radius: 50 0 0 50;
+    
+}
+.buttonTransClass{
+    -fx-background-color: transparent;
+    -fx-font-family: "Bookman Old Style";
+    -fx-text-fill: white;
+    -fx-font-weight: bold italic;
+}

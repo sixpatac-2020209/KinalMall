@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracion" language="groovy" pageWidth="612" pageHeight="792" whenNoDataType="BlankPage" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b826d353-ca7f-4d0a-86e8-08672f4f5843">
+	<property name="ireport.zoom" value="1.0000000000000036"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.background.image.properties" value="true,true,0.25,-8,-8,0,0,1040,1385"/>
+	<property name="ireport.callouts" value="##Thu Jul 15 21:02:17 CST 2021"/>
+	<queryString>
+		<![CDATA[call sp_ListarAdministracion();]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="-18" y="-21" width="609" height="773" uuid="6901e500-087e-469a-ba57-9e65b67c7e91"/>
+				<imageExpression><![CDATA["C:\\Users\\sduar\\Desktop\\Kinal Mall\\KinalMall2020209\\src\\org\\sduardixpatac\\images\\FondoReporte.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="125" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="50" y="46" width="107" height="79" uuid="3d9a24bb-b9bd-4e56-9a61-885bb636b26b"/>
+				<imageExpression><![CDATA["C:\\Users\\sduar\\Desktop\\Kinal Mall\\KinalMall2020209\\src\\org\\sduardixpatac\\images\\KinalMallLogo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="157" y="68" width="168" height="42" uuid="aa5fafb3-efc9-40f8-aac6-794931cce322"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Administración]]></text>
+			</staticText>
+			<image>
+				<reportElement x="325" y="63" width="54" height="50" uuid="46bdb3b0-db66-4f29-ab9e-ebfbb7905dd5"/>
+				<imageExpression><![CDATA["C:\\Users\\sduar\\Desktop\\Kinal Mall\\KinalMall2020209\\src\\org\\sduardixpatac\\images\\Administracion.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement mode="Opaque" x="104" y="0" width="393" height="30" backcolor="#FFFF33" uuid="a1f5024c-b2c6-4f80-88d3-485b6a1e2b1e"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="122" y="0" width="130" height="30" forecolor="#000000" uuid="153a8734-5b8d-464e-ab4a-0c61b2ac9e1f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" size="12"/>
+				</textElement>
+				<text><![CDATA[Código Administración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="0" width="130" height="30" forecolor="#000000" uuid="4579fbcc-d9b9-4f5f-8c98-18de6190fad2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" size="12"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="382" y="0" width="103" height="30" forecolor="#000000" uuid="26b14bf2-45a4-4653-8539-6f8dc4c5d982"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" size="12"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23">
+			<textField>
+				<reportElement x="140" y="0" width="100" height="20" uuid="2a38729a-3589-46b4-b4a5-9630e053ab52"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="393" y="0" width="76" height="20" uuid="4dcfe81e-04ad-4a8f-910f-84982f6c7795"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="122" y="19" width="363" height="1" uuid="d9ea79e9-6b20-47c3-93ea-6c1856e9d4c0"/>
+			</line>
+			<textField>
+				<reportElement x="249" y="0" width="133" height="20" uuid="a7a222de-a238-436d-af9e-ec1f75de6b2e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="310" y="-2" width="210" height="20" uuid="006aca08-7b86-4484-a13a-ca07fc2471c5"/>
+				<text><![CDATA[Sduard Alejandro Ixpatac Sipaque 2020209]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

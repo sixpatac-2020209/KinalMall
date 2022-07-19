@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="1112.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sduardixpatac.controller.EmpleadoController">
+   <children>
+      <Pane prefHeight="475.0" prefWidth="134.0" styleClass="paneNegro" stylesheets="@../resource/kinalMallCss.css">
+         <children>
+            <GridPane layoutY="168.0" prefHeight="148.0" prefWidth="134.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btnNuevo" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="17.0" prefWidth="134.0" styleClass="buttonTrans" stylesheets="@../resource/kinalMallCss.css" text="Agregar">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="28.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="32.0" prefWidth="151.0" styleClass="buttonTrans" stylesheets="@../resource/kinalMallCss.css" text="Eliminar" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="24.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="31.0" prefWidth="160.0" styleClass="buttonTrans" stylesheets="@../resource/kinalMallCss.css" text="Editar" GridPane.rowIndex="2">
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="23.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Edit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#cancelar" prefHeight="32.0" prefWidth="190.0" styleClass="buttonTrans" stylesheets="@../resource/kinalMallCss.css" text="Reporte" GridPane.rowIndex="3">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="44.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Report.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </GridPane>
+            <Pane prefHeight="131.0" prefWidth="134.0" styleClass="pane" stylesheets="@../resource/kinalMallCss.css">
+               <children>
+                  <ImageView fitHeight="88.0" fitWidth="92.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Empleados.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="28.0" layoutY="105.0" mnemonicParsing="false" styleClass="buttonTransClass" stylesheets="@../resource/kinalMallCss.css" text="Empleados" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="27.0" layoutY="418.0" onMouseClicked="#ventanaCargo" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Back.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="80.0" layoutY="418.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="33.0" layoutY="449.0" prefHeight="15.0" prefWidth="20.0" text="Back" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="449.0" prefHeight="15.0" prefWidth="25.0" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="134.0" layoutY="-1.0" prefHeight="170.0" prefWidth="983.0" styleClass="paneNegro" stylesheets="@../resource/kinalMallCss.css">
+         <children>
+            <GridPane layoutX="76.0" layoutY="38.0" prefHeight="32.0" prefWidth="156.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.200048828125" minWidth="10.0" prefWidth="126.4" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.199951171875" minWidth="10.0" prefWidth="34.599999999999994" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="txtCodigoEmpleado" GridPane.columnIndex="1" />
+                  <Label prefHeight="32.0" prefWidth="168.0" text="Código Empleado" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane fx:id="grpFechaContratacion" layoutX="299.0" layoutY="6.0" prefHeight="95.0" prefWidth="585.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="30.0" prefWidth="149.0" text="Nombre Empleado" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="149.0" text="Correo Electronico" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="149.0" text="Fecha Contratación" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="149.0" text="Apellido Empleado" textFill="WHITE" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="18.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="149.0" text="Teléfono" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="85.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="28.0" prefWidth="180.0" text="Sueldo" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="97.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="txtNombreEmpleado" editable="false" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtApellidoEmpleado" editable="false" GridPane.columnIndex="3" />
+                  <TextField fx:id="txtCorreoElectronico" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtTelefono" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtSueldo" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="154.0" layoutY="105.0" prefHeight="60.0" prefWidth="761.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.20001220703125" minWidth="10.0" prefWidth="154.5999755859375" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.9999877929687" minWidth="10.0" prefWidth="224.8" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.5999755859375" minWidth="10.0" prefWidth="157.60000000000002" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.59992675781245" minWidth="10.0" prefWidth="219.59992675781245" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="30.0" prefWidth="154.0" text="Código Departamento" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="150.0" text="Código Horario" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="160.0" text="Código Cargo" textFill="WHITE" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="60.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="176.0" text="Código Administración" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="3.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox fx:id="cmbCodigoDepartamento" prefHeight="26.0" prefWidth="242.0" GridPane.columnIndex="1" />
+                  <ComboBox fx:id="cmbCodigoCargo" prefHeight="26.0" prefWidth="278.0" GridPane.columnIndex="3" />
+                  <ComboBox fx:id="cmbCodigoHorario" prefHeight="26.0" prefWidth="278.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cmbCodigoAdministracion" prefHeight="26.0" prefWidth="297.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Polygon fill="#ffff2161" layoutX="184.0" layoutY="228.0" points="-50.0, 247.60000610351562, 121.19998168945312, 72.60000610351562, -50.0, -59.600006103515625" stroke="#ffff21" strokeType="INSIDE" />
+      <Polygon fill="#ffff2161" layoutX="858.0" layoutY="229.0" points="92.0, 88.60000610351562, 254.0, 246.0, 254.0, -59.600006103515625" stroke="#ffff21" strokeType="INSIDE" />
+      <TableView fx:id="tblEmpleados" layoutX="149.0" layoutY="181.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="282.0" prefWidth="954.0" stylesheets="@../resource/kinalMallMenu.css">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpleado" prefWidth="90.39999389648438" text="Cod. Empleado" />
+          <TableColumn fx:id="colNombreEmpleado" prefWidth="88.00001525878906" text="Nombre" />
+            <TableColumn fx:id="colApellidoEmpleado" prefWidth="82.39996337890625" text="Apellido" />
+            <TableColumn fx:id="colCorreoElectronico" prefWidth="153.5999755859375" text="Correo" />
+            <TableColumn fx:id="colTelefono" prefWidth="58.4000244140625" text="Tel." />
+            <TableColumn fx:id="colFechaContratacion" prefWidth="114.4000244140625" text="Fecha Contratación" />
+            <TableColumn fx:id="colSueldo" prefWidth="76.79998779296875" text="Sueldo" />
+            <TableColumn fx:id="colCodigoDepartamento" prefWidth="73.5999755859375" text="Cod. Depto." />
+            <TableColumn fx:id="colCodigoCargo" prefWidth="66.4000244140625" text="Cod. Cargo" />
+            <TableColumn fx:id="colCodigoHorario" prefWidth="79.20013427734375" text="Cod. Horario" />
+            <TableColumn fx:id="colCodigoAdministracion" prefWidth="73.60009765625" text="Cod. Admin." />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteIndividualAdmin" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3fff9771-1b7a-48b7-ba10-81180f913657">
+	<property name="ireport.zoom" value="1.0000000000000004"/>
+	<property name="ireport.x" value="80"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codAdministracion" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_BuscarAdministracion($P{codAdministracion});]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="86" y="28" width="130" height="20" uuid="240466dd-c64d-4f4e-83ef-ae7a7ed6c4b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[codigoAdministracion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="28" width="130" height="20" uuid="5c0bc1f8-04d6-41ca-a9c3-3e90e9bc9794"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="28" width="132" height="20" uuid="fab86f7c-0330-4b47-ae64-65670f03abc5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="86" y="0" width="130" height="20" uuid="00ca5e3b-6349-4968-afdf-367e1a9ee4e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="0" width="130" height="20" uuid="ccf2057a-b665-420f-b197-bd199e3270a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="0" width="132" height="20" uuid="982cf2ea-8f31-44d0-aeb8-70f4d9149e5f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

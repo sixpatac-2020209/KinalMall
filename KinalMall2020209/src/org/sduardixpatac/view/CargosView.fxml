@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sduardixpatac.controller.CargoController">
+   <children>
+      <Pane prefHeight="489.0" prefWidth="200.0" styleClass="paneNegro" stylesheets="@../resource/kinalMallCss.css">
+         <children>
+            <Pane layoutX="28.0" prefHeight="140.0" prefWidth="144.0" styleClass="pane" stylesheets="@../resource/kinalMallCss.css">
+               <children>
+                  <ImageView fitHeight="97.0" fitWidth="102.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Cargos.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="36.0" layoutY="111.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="73.0" styleClass="buttonTransClass" stylesheets="@../resource/kinalMallCss.css" text="Cargos" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="49.0" fitWidth="59.0" layoutX="75.0" layoutY="427.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="200.0" prefHeight="140.0" prefWidth="593.0" styleClass="paneNegro" stylesheets="@../resource/kinalMallCss.css">
+         <children>
+            <GridPane layoutX="20.0" layoutY="22.0" prefHeight="97.0" prefWidth="376.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="117.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.0" minWidth="10.0" prefWidth="259.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="txtCodigoCargo" editable="false" prefHeight="31.0" prefWidth="167.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtNombreCargo" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label prefHeight="48.0" prefWidth="220.0" text="Nombre Cargo" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Bookman Old Style Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="80.0" prefWidth="152.0" text="CódigoCargo" textFill="WHITE">
+                     <font>
+                        <Font name="Bookman Old Style Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Button layoutX="442.0" layoutY="49.0" mnemonicParsing="false" onAction="#ventanaEmpleado" styleClass="buttonTrans" stylesheets="@../resource/kinalMallCss.css" text="Empleados">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Empleados.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <VBox layoutX="25.0" layoutY="187.0" prefHeight="196.0" prefWidth="176.0">
+         <children>
+            <Button fx:id="btnNuevo" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="49.0" prefWidth="209.0" styleClass="buttonTrans" stylesheets="@../resource/kinalMallCss.css" text="Nuevo">
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="40.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEliminar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="49.0" prefWidth="181.0" styleClass="buttonTrans" stylesheets="@../resource/kinalMallCss.css" text="Eliminar">
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="40.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEditar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="49.0" prefWidth="194.0" styleClass="buttonTrans" stylesheets="@../resource/kinalMallCss.css" text="Editar">
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="40.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReporte" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="49.0" prefWidth="202.0" styleClass="buttonTrans" stylesheets="@../resource/kinalMallCss.css" text="Reporte">
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="40.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Report.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Polygon fill="#fbff1f73" layoutX="283.0" layoutY="223.0" points="-83.0, 266.0, 213.0, 104.0, -83.0, -83.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Polygon fill="#fbff1f72" layoutX="580.0" layoutY="216.0" points="-84.0, 111.0, 212.0, 273.0, 213.0, -76.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <TableView fx:id="tblCargos" layoutX="237.0" layoutY="168.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="300.0" prefWidth="521.0" stylesheets="@../resource/kinalMallMenu.css">
+        <columns>
+          <TableColumn fx:id="colCodigoCargo" prefWidth="178.0" text="Código Cargo" />
+          <TableColumn fx:id="colNombreCargo" prefWidth="342.0" text="Nombre Cargo" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
